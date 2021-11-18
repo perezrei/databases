@@ -14,7 +14,9 @@ const db = new sqlite3.Database(DB_PATH);
 
 const userInput = {};
 
-const queryString = ``;
+const queryString = `
+  SELECT LastName FROM Employee WHERE FirstName = "Laura";
+`;
 
 db.all(queryString, (err, rows) => {
   if (err) {
